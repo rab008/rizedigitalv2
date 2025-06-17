@@ -10,7 +10,7 @@ import About from './pages/About';
  */
 function App() {
   return (
-    <Router basename="/rizedigital">
+    <Router basename="/rizedigitalv2">
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
