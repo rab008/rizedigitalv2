@@ -8,8 +8,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Base path for GitHub Pages deployment
-  // Change 'rizedigital' to your GitHub repository name
-  base: '/rizedigital/',
+  // Change 'rizedigitalv2' to your GitHub repository name
+  base: '/rizedigitalv2/',
   // Build configuration
   build: {
     outDir: 'dist',
