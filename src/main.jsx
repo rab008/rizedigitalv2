@@ -5,6 +5,8 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <BrowserRouter basename="/rizedigitalv2">
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 )
