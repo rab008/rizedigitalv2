@@ -27,8 +27,8 @@ const Home = () => {
       link: "/services/seo"
     },
     {
-      title: "Copywriting",
-      description: "Compelling content that speaks to your audience and drives action. Our copywriters craft messages that resonate and convert.",
+      title: "AI & Automations",
+      description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
       </svg>`,
@@ -94,11 +94,10 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="heading-1 mb-6">
-                Elevate Your Digital Presence with Strategic Marketing Solutions
+                We Take Service Businesses to the Next Level
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                We help businesses grow through innovative digital marketing strategies, 
-                custom web development, and data-driven SEO campaigns.
+                We help businesses prepare for the next generation of internet with innovative digital marketing strategies, AI business automations,  custom web development, and data-driven SEO campaigns.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact" className="btn btn-primary text-center">
@@ -136,8 +135,7 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="heading-2 text-dark-blue mb-4">Our Services</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              We offer a comprehensive range of digital marketing services to help your business 
-              thrive in the digital landscape. Each service is tailored to your specific needs and goals.
+             Our Full Stack Marketing Solutions can supercharge your business. We know exactly how to save you time and money. 
             </p>
           </div>
           
@@ -166,37 +164,32 @@ const Home = () => {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-2 text-dark-blue mb-4">Digital Marketing Agency That Drives Results</h2>
+              <h2 className="heading-2 text-dark-blue mb-4">Full Stack Digital Marketing Solutions For Your Unique Business Needs</h2>
               <p className="text-gray-600 mb-6">
-                At Rize Digital, we're more than just a digital marketing agency. We're your strategic partner 
-                in navigating the complex digital landscape and achieving measurable business growth.
-              </p>
-              <p className="text-gray-600 mb-6">
-                Our team of experts combines creativity with data-driven strategies to deliver solutions 
-                that not only look great but also perform exceptionally well.
+                Are you ready to transform your digital presence? At Rize Digital, we’re not just a marketing agency—we’re your growth partner. Our team blends creativity with data-driven strategies to deliver solutions that don’t just look great—they drive real results. From boosting traffic to increasing conversions, we’ve got you covered.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accent-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Data-driven strategies tailored to your business goals</span>
+                  <span>Customized marketing plans aligned with your unique goals</span>
                 </li>
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accent-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Experienced team of digital marketing specialists</span>
+                  <span>A team with over 10 years of average industry experience</span>
                 </li>
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accent-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Proven track record of delivering results</span>
+                  <span>Proven results, like a 30% average ROI increase in six months</span>
                 </li>
               </ul>
               <Link to="/about" className="btn btn-primary">
-                Learn More About Us
+                Get Your Free Marketing Assessment
               </Link>
             </div>
             <div className="order-first lg:order-last">
