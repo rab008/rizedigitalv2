@@ -18,11 +18,11 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img 
-            src="https://drive.google.com/uc?export=view&id=1bwytLdYTi5olS_KR6Issqs5uWDYgNBEJ" 
+            src="/rizedigitalv2/images/Rize-Digital-horizontal-logo.png" 
             alt="Rize Digital Logo" 
             className="h-10"
           />
-          <span className="ml-2 text-xl font-bold">Rize Digital</span>
+          <span className="hidden ml-2 text-xl font-bold">Rize Digital</span>
         </Link>
 
         {/* Desktop Navigation */}
