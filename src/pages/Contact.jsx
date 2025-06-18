@@ -167,74 +167,287 @@ const Contact = () => {
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-1 mb-8">
-              <span className="block transform transition-all">Contact Us</span>
+            <h1 className="heading-1 mb-6">
+              <span className="block transform transition-all">We'd Love to Hear From You</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your digital marketing strategy? The Rize Digital team is here to help you achieve industry dominance and sustainable business growth.
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Our team is ready to answer your questions and discuss how we can help your business grow. We respond to all inquiries within one business day.
             </p>
-            
-            {/* Scroll indicator */}
-            <div className="hidden md:block mx-auto mt-16 w-6 h-10 border-2 border-white rounded-full relative">
-              <span className="absolute top-1 left-1/2 w-1 h-2 bg-white rounded-full transform -translate-x-1/2 animate-bounce"></span>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Get in Touch Section */}
-      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
+      {/* Contact Form Section - 2 Column Layout */}
+      <section ref={addToRefs} id="contact-form" className="py-16 opacity-0 transition-opacity duration-1000">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Reach Out</span>
-              <h2 className="heading-2 text-dark-blue mb-6">Get in Touch with Rize Digital</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Contact Us</span>
+              <h2 className="heading-2 text-dark-blue mb-4">Get in Touch with Rize Digital</h2>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                Whether you're looking for lead generation, SEO, website development, or any of our other specialized services, we're ready to discuss how we can help your business thrive.
+                Whether you're looking for lead generation, SEO, website development, or any of our specialized services, we're here to help your business thrive.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-accent-orange">
-                <h3 className="text-2xl font-semibold text-dark-blue mb-4">How We Can Help</h3>
-                <p className="text-gray-600 mb-6">
-                  Our team of experts specializes in creating customized digital marketing strategies that drive real results. We understand the unique challenges faced by businesses in the service industry and have developed proven approaches to overcome them.
-                </p>
-                <p className="text-gray-600">
-                  From increasing your online visibility to generating high-quality leads, we have the expertise and tools to help your business grow. Let's start a conversation about your goals and how we can help you achieve them.
-                </p>
-              </div>
-              
-              <div className="relative">
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent-orange opacity-10 rounded-full"></div>
-                <div className="relative z-10 bg-gradient-to-br from-navy-blue to-dark-blue text-white p-8 rounded-xl shadow-lg">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-semibold">Start a Conversation</h3>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-6">
-                    We're committed to responding to all inquiries within one business day. Our team is ready to answer your questions and discuss how we can help your business grow.
+            
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                {/* Contact Information Column */}
+                <div className="bg-gradient-to-br from-navy-blue to-dark-blue text-white p-8 lg:p-10">
+                  <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+                  <p className="text-gray-300 mb-8">
+                    Fill out the form and our team will get back to you within one business day.
                   </p>
                   
-                  <div className="space-y-4">
-                    <a href="tel:+14752644226" className="flex items-center text-white hover:text-accent-orange transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                      (475) 264-4226
-                    </a>
-                    <a href="mailto:info@rizedigital.com" className="flex items-center text-white hover:text-accent-orange transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      info@rizedigital.com
-                    </a>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-medium mb-1">Phone</h4>
+                        <a href="tel:+14752644226" className="text-gray-300 hover:text-accent-orange transition-colors">
+                          (475) 264-4226
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-medium mb-1">Email</h4>
+                        <a href="mailto:info@rizedigital.com" className="text-gray-300 hover:text-accent-orange transition-colors">
+                          info@rizedigital.com
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-medium mb-1">Hours</h4>
+                        <p className="text-gray-300">Monday - Friday: 9:00 AM - 5:00 PM ET</p>
+                        <p className="text-gray-300">Saturday - Sunday: Closed</p>
+                      </div>
+                    </div>
                   </div>
+                  
+                  <div className="mt-12">
+                    <h4 className="text-white font-medium mb-4">Connect With Us</h4>
+                    <div className="flex space-x-4">
+                      {socialMedia.slice(0, 4).map((platform, index) => (
+                        <a 
+                          key={index}
+                          href={platform.url}
+                          className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-accent-orange transition-colors duration-300"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={platform.name}
+                        >
+                          <div className="text-white" dangerouslySetInnerHTML={{ __html: platform.icon.replace('width="24" height="24"', 'width="18" height="18"') }} />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Form Column */}
+                <div className="p-8 lg:p-10 col-span-2">
+                  <form onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
+                          Full Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="fullName"
+                          name="fullName"
+                          value={formData.fullName}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                          placeholder="Your name"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="companyName" className="block text-gray-700 font-medium mb-2">
+                          Company Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="companyName"
+                          name="companyName"
+                          value={formData.companyName}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                          placeholder="Your company"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                          Email Address <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                          placeholder="your.email@example.com"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                          placeholder="(123) 456-7890"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label htmlFor="website" className="block text-gray-700 font-medium mb-2">
+                          Website URL
+                        </label>
+                        <input
+                          type="url"
+                          id="website"
+                          name="website"
+                          value={formData.website}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                          placeholder="https://yourwebsite.com"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="serviceInterest" className="block text-gray-700 font-medium mb-2">
+                          Service Interest
+                        </label>
+                        <select
+                          id="serviceInterest"
+                          name="serviceInterest"
+                          value={formData.serviceInterest}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                        >
+                          <option value="">Select a service</option>
+                          <option value="Lead Generation">Lead Generation</option>
+                          <option value="Google Ads Management">Google Ads Management</option>
+                          <option value="Search Engine Optimization">Search Engine Optimization</option>
+                          <option value="Website Development">Website Development</option>
+                          <option value="AI-Powered Automations">AI-Powered Automations</option>
+                          <option value="Email Marketing">Email Marketing</option>
+                          <option value="Not Sure / Multiple Services">Not Sure / Multiple Services</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <label htmlFor="referralSource" className="block text-gray-700 font-medium mb-2">
+                        How did you hear about us?
+                      </label>
+                      <input
+                        type="text"
+                        id="referralSource"
+                        name="referralSource"
+                        value={formData.referralSource}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                        placeholder="Google, referral, social media, etc."
+                      />
+                    </div>
+                    
+                    <div className="mb-6">
+                      <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                        Message / Additional Information
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={4}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                        placeholder="Tell us about your project or specific needs..."
+                      ></textarea>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <label className="block text-gray-700 font-medium mb-3">
+                        Preferred contact method
+                      </label>
+                      <div className="flex space-x-6">
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            id="contactEmail"
+                            name="preferredContact"
+                            value="email"
+                            checked={formData.preferredContact === 'email'}
+                            onChange={handleChange}
+                            className="w-4 h-4 text-accent-orange focus:ring-accent-orange"
+                          />
+                          <label htmlFor="contactEmail" className="ml-2 text-gray-700">
+                            Email
+                          </label>
+                        </div>
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            id="contactPhone"
+                            name="preferredContact"
+                            value="phone"
+                            checked={formData.preferredContact === 'phone'}
+                            onChange={handleChange}
+                            className="w-4 h-4 text-accent-orange focus:ring-accent-orange"
+                          />
+                          <label htmlFor="contactPhone" className="ml-2 text-gray-700">
+                            Phone
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <button
+                        type="submit"
+                        className="btn btn-primary px-8 py-3 text-lg w-full md:w-auto"
+                      >
+                        Submit Request
+                      </button>
+                      
+                      <p className="text-sm text-gray-500 mt-4">
+                        <span className="text-red-500">*</span> Required fields
+                      </p>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -242,13 +455,13 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Free Consultation Section */}
-      <section ref={addToRefs} className="py-20 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000">
+      {/* Free Consultation Benefits Section */}
+      <section ref={addToRefs} className="py-16 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Free Consultation</span>
-              <h2 className="heading-2 text-dark-blue mb-6">Schedule a Free Consultation</h2>
+              <h2 className="heading-2 text-dark-blue mb-4">Schedule a Free Consultation</h2>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                 Take the first step toward digital marketing success by scheduling your free consultation.
               </p>
@@ -301,340 +514,57 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Information & Service Areas Section */}
-      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div>
-              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Contact Details</span>
-              <h2 className="heading-2 text-dark-blue mb-6">Contact Information</h2>
-              
-              <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-dark-blue mb-1">Phone</h3>
-                      <a href="tel:+14752644226" className="text-gray-700 hover:text-accent-orange transition-colors">
-                        (475) 264-4226
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-dark-blue mb-1">Email</h3>
-                      <a href="mailto:info@rizedigital.com" className="text-gray-700 hover:text-accent-orange transition-colors">
-                        info@rizedigital.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-dark-blue mb-1">Hours of Operation</h3>
-                      <p className="text-gray-700">Monday - Friday: 9:00 AM - 5:00 PM ET</p>
-                      <p className="text-gray-700">Saturday - Sunday: Closed</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Service Areas */}
-            <div>
-              <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Coverage</span>
-              <h2 className="heading-2 text-dark-blue mb-6">Service Areas</h2>
-              
-              <div className="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-accent-orange opacity-5 rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
-                
-                <div className="relative z-10">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-semibold text-dark-blue">Nationwide Service</h3>
-                  </div>
-                  
-                  <p className="text-gray-700 mb-6">
-                    Rize Digital serves businesses nationwide. Our digital marketing strategies can be effectively implemented regardless of your location. We work with businesses of all sizes across the country, helping them achieve digital dominance in their respective markets.
-                  </p>
-                  
-                  <p className="text-gray-700 mb-6">
-                    From small towns to metropolitan cities, we have a proven formula to bring you more clients.
-                  </p>
-                  
-                  <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-accent-orange">
-                    <p className="text-gray-700 italic">
-                      "Our digital-first approach means we can deliver exceptional results for clients anywhere in the United States, with the same level of service and attention to detail."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section ref={addToRefs} id="contact-form" className="py-20 bg-gradient-to-b from-gray-50 to-white opacity-0 transition-opacity duration-1000">
+      {/* Service Areas Section */}
+      <section ref={addToRefs} className="py-16 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Get Started</span>
-              <h2 className="heading-2 text-dark-blue mb-6">Request More Information</h2>
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Coverage</span>
+              <h2 className="heading-2 text-dark-blue mb-6">Service Areas</h2>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                Please fill out the form below, and a member of our team will contact you shortly. We're committed to responding to all inquiries within one business day.
+                Rize Digital serves businesses nationwide with our comprehensive digital marketing solutions.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <form onSubmit={handleSubmit} className="p-8 md:p-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
-                      Full Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="fullName"
-                      name="fullName"
-                      value={formData.fullName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                      placeholder="Your name"
-                    />
+            <div className="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-accent-orange opacity-5 rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
-                  
-                  <div>
-                    <label htmlFor="companyName" className="block text-gray-700 font-medium mb-2">
-                      Company Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="companyName"
-                      name="companyName"
-                      value={formData.companyName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                      placeholder="Your company"
-                    />
-                  </div>
+                  <h3 className="text-xl font-semibold text-dark-blue">Nationwide Service</h3>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                      Email Address <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                      placeholder="(123) 456-7890"
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="website" className="block text-gray-700 font-medium mb-2">
-                      Website URL
-                    </label>
-                    <input
-                      type="url"
-                      id="website"
-                      name="website"
-                      value={formData.website}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                      placeholder="https://yourwebsite.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="serviceInterest" className="block text-gray-700 font-medium mb-2">
-                      Service Interest
-                    </label>
-                    <select
-                      id="serviceInterest"
-                      name="serviceInterest"
-                      value={formData.serviceInterest}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="Lead Generation">Lead Generation</option>
-                      <option value="Google Ads Management">Google Ads Management</option>
-                      <option value="Search Engine Optimization">Search Engine Optimization</option>
-                      <option value="Website Development">Website Development</option>
-                      <option value="AI-Powered Automations">AI-Powered Automations</option>
-                      <option value="Email Marketing">Email Marketing</option>
-                      <option value="Not Sure / Multiple Services">Not Sure / Multiple Services</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="referralSource" className="block text-gray-700 font-medium mb-2">
-                    How did you hear about us?
-                  </label>
-                  <input
-                    type="text"
-                    id="referralSource"
-                    name="referralSource"
-                    value={formData.referralSource}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                    placeholder="Google, referral, social media, etc."
-                  />
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                    Message / Additional Information
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
-                    placeholder="Tell us about your project or specific needs..."
-                  ></textarea>
-                </div>
-                
-                <div className="mb-8">
-                  <label className="block text-gray-700 font-medium mb-3">
-                    Preferred contact method
-                  </label>
-                  <div className="flex space-x-6">
-                    <div className="flex items-center">
-                      <input
-                        type="radio"
-                        id="contactEmail"
-                        name="preferredContact"
-                        value="email"
-                        checked={formData.preferredContact === 'email'}
-                        onChange={handleChange}
-                        className="w-4 h-4 text-accent-orange focus:ring-accent-orange"
-                      />
-                      <label htmlFor="contactEmail" className="ml-2 text-gray-700">
-                        Email
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        type="radio"
-                        id="contactPhone"
-                        name="preferredContact"
-                        value="phone"
-                        checked={formData.preferredContact === 'phone'}
-                        onChange={handleChange}
-                        className="w-4 h-4 text-accent-orange focus:ring-accent-orange"
-                      />
-                      <label htmlFor="contactPhone" className="ml-2 text-gray-700">
-                        Phone
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex justify-center">
-                  <button
-                    type="submit"
-                    className="btn btn-primary px-8 py-3 text-lg"
-                  >
-                    Submit Request
-                  </button>
-                </div>
-                
-                <p className="text-center text-sm text-gray-500 mt-6">
-                  <span className="text-red-500">*</span> Required fields
+                <p className="text-gray-700 mb-6">
+                  Rize Digital serves businesses nationwide. Our digital marketing strategies can be effectively implemented regardless of your location. We work with businesses of all sizes across the country, helping them achieve digital dominance in their respective markets.
                 </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Connect With Us Section */}
-      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Stay Connected</span>
-            <h2 className="heading-2 text-dark-blue mb-6">Connect With Us</h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-12">
-              Follow Rize Digital on social media to stay updated on digital marketing trends, tips, and company news.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-8">
-              {socialMedia.map((platform, index) => (
-                <a 
-                  key={index}
-                  href={platform.url}
-                  className="flex flex-col items-center group"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-3 group-hover:bg-navy-blue transition-colors duration-300">
-                    <div className="text-gray-600 group-hover:text-white transition-colors duration-300" dangerouslySetInnerHTML={{ __html: platform.icon }} />
-                  </div>
-                  <span className="text-gray-700 group-hover:text-accent-orange transition-colors duration-300">{platform.name}</span>
-                </a>
-              ))}
+                
+                <p className="text-gray-700 mb-6">
+                  From small towns to metropolitan cities, we have a proven formula to bring you more clients.
+                </p>
+                
+                <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-accent-orange">
+                  <p className="text-gray-700 italic">
+                    "Our digital-first approach means we can deliver exceptional results for clients anywhere in the United States, with the same level of service and attention to detail."
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section ref={addToRefs} className="py-20 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000">
+      <section ref={addToRefs} className="py-16 bg-gradient-to-b from-gray-50 to-white opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Questions</span>
-              <h2 className="heading-2 text-dark-blue mb-6">Frequently Asked Questions</h2>
+              <h2 className="heading-2 text-dark-blue mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                 Find answers to common questions about our services and approach.
               </p>
@@ -673,9 +603,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
       {/* Final CTA Section */}
-      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
+      <section ref={addToRefs} className="py-16 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-2 text-dark-blue mb-6">Ready to Get Started?</h2>
@@ -695,11 +624,38 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection 
-        heading="Transform Your Digital Presence Today"
-        subheading="Partner with Rize Digital for strategic, results-driven digital marketing solutions."
-      />
+      {/* Social Media Connections */}
+      <section ref={addToRefs} className="py-16 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Stay Connected</span>
+            <h2 className="heading-2 text-dark-blue mb-6">Connect With Us</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-12">
+              Follow Rize Digital on social media to stay updated on digital marketing trends, tips, and company news.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-8">
+              {socialMedia.map((platform, index) => (
+                <a 
+                  key={index}
+                  href={platform.url}
+                  className="flex flex-col items-center group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-3 group-hover:bg-navy-blue transition-colors duration-300">
+                    <div className="text-gray-600 group-hover:text-white transition-colors duration-300" dangerouslySetInnerHTML={{ __html: platform.icon }} />
+                  </div>
+                  <span className="text-gray-700 group-hover:text-accent-orange transition-colors duration-300">{platform.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+   
     </>
   );
 };
