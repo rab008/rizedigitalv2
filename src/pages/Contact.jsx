@@ -1,0 +1,707 @@
+import { Link } from 'react-router-dom';
+import CTASection from '../components/CTASection';
+import { useEffect, useRef, useState } from 'react';
+
+/**
+ * Contact page component for Rize Digital website
+ * Includes contact information, form, service areas, and FAQs
+ * Enhanced with modern UI/UX design elements
+ */
+const Contact = () => {
+  // Form state
+  const [formData, setFormData] = useState({
+    fullName: '',
+    companyName: '',
+    email: '',
+    phone: '',
+    website: '',
+    serviceInterest: '',
+    referralSource: '',
+    message: '',
+    preferredContact: 'email'
+  });
+
+  // Form handling
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic would go here
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! We will contact you shortly.');
+    // Reset form
+    setFormData({
+      fullName: '',
+      companyName: '',
+      email: '',
+      phone: '',
+      website: '',
+      serviceInterest: '',
+      referralSource: '',
+      message: '',
+      preferredContact: 'email'
+    });
+  };
+
+  // FAQ state
+  const [openFaq, setOpenFaq] = useState(null);
+  
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  // FAQ data
+  const faqs = [
+    {
+      question: "Do you work with businesses outside of Connecticut?",
+      answer: "Absolutely! While we're based in Connecticut, the vast majority of our clients nationwide. Our digital marketing strategies can be effectively implemented regardless of your location."
+    },
+    {
+      question: "How quickly can I expect to see results?",
+      answer: "Results timelines vary depending on the services and your specific industry. Some services like Google Ads can show results within days, while SEO typically takes 3-6 months to show significant improvements. During your consultation, we'll provide realistic timelines based on your specific situation. What we can guarantee is that the results will last."
+    },
+    {
+      question: "Do you require long-term contracts?",
+      answer: "We believe in earning your business every month. While we recommend a minimum commitment to give strategies time to work (especially for SEO), we don't lock clients into lengthy contracts. We'll discuss the optimal arrangement during your consultation."
+    },
+    {
+      question: "What makes Rize Digital different from other agencies?",
+      answer: "Our exclusive partnership model means we work with only one business per industry in each service area. This ensures you never compete with another Rize Digital client for visibility or leads. We offer a much more specialized hands-on experience compared to other agencies that just do plug and play with templates. Additionally, our specialized knowledge in contractor and home service industries allows us to create highly effective campaigns tailored to your specific market. Think of us as your personal CMO."
+    },
+    {
+      question: "What information do I need to prepare for my consultation?",
+      answer: "To make the most of your consultation, it helps to have information about your current marketing efforts, business goals, target audience, and any specific challenges you're facing. However, we can start the conversation wherever you are in your digital marketing journey."
+    }
+  ];
+
+  // Social media data
+  const socialMedia = [
+    {
+      name: "LinkedIn",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+      </svg>`,
+      url: "#"
+    },
+    {
+      name: "Facebook",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/>
+      </svg>`,
+      url: "#"
+    },
+    {
+      name: "Instagram",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>`,
+      url: "#"
+    },
+    {
+      name: "Twitter",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z"/>
+      </svg>`,
+      url: "#"
+    }
+  ];
+
+  // Consultation benefits
+  const consultationBenefits = [
+    "Discuss your business goals and challenges",
+    "Analyze your current digital marketing efforts",
+    "Identify opportunities for improvement",
+    "Outline potential strategies tailored to your specific needs",
+    "Answer any questions you have about our services and approach"
+  ];
+
+  // Refs for scroll animations
+  const sectionRefs = useRef([]);
+  
+  // Simple scroll animation effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+    
+    return () => {
+      sectionRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+  
+  // Add ref to section for animation
+  const addToRefs = (el) => {
+    if (el && !sectionRefs.current.includes(el)) {
+      sectionRefs.current.push(el);
+    }
+  };
+
+  return (
+    <>
+      {/* Hero Section - Enhanced with gradient background and visual elements */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-dark-blue via-navy-blue to-dark-blue text-white py-12 md:py-20">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-10 w-64 h-64 bg-accent-orange rounded-full opacity-10 blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-blue-400 rounded-full opacity-10 blur-2xl"></div>
+        
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="heading-1 mb-8">
+              <span className="block transform transition-all">Contact Us</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Ready to transform your digital marketing strategy? The Rize Digital team is here to help you achieve industry dominance and sustainable business growth.
+            </p>
+            
+            {/* Scroll indicator */}
+            <div className="hidden md:block mx-auto mt-16 w-6 h-10 border-2 border-white rounded-full relative">
+              <span className="absolute top-1 left-1/2 w-1 h-2 bg-white rounded-full transform -translate-x-1/2 animate-bounce"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get in Touch Section */}
+      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Reach Out</span>
+              <h2 className="heading-2 text-dark-blue mb-6">Get in Touch with Rize Digital</h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                Whether you're looking for lead generation, SEO, website development, or any of our other specialized services, we're ready to discuss how we can help your business thrive.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-accent-orange">
+                <h3 className="text-2xl font-semibold text-dark-blue mb-4">How We Can Help</h3>
+                <p className="text-gray-600 mb-6">
+                  Our team of experts specializes in creating customized digital marketing strategies that drive real results. We understand the unique challenges faced by businesses in the service industry and have developed proven approaches to overcome them.
+                </p>
+                <p className="text-gray-600">
+                  From increasing your online visibility to generating high-quality leads, we have the expertise and tools to help your business grow. Let's start a conversation about your goals and how we can help you achieve them.
+                </p>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent-orange opacity-10 rounded-full"></div>
+                <div className="relative z-10 bg-gradient-to-br from-navy-blue to-dark-blue text-white p-8 rounded-xl shadow-lg">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold">Start a Conversation</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6">
+                    We're committed to responding to all inquiries within one business day. Our team is ready to answer your questions and discuss how we can help your business grow.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <a href="tel:+14752644226" className="flex items-center text-white hover:text-accent-orange transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      (475) 264-4226
+                    </a>
+                    <a href="mailto:info@rizedigital.com" className="flex items-center text-white hover:text-accent-orange transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      info@rizedigital.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Free Consultation Section */}
+      <section ref={addToRefs} className="py-20 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Free Consultation</span>
+              <h2 className="heading-2 text-dark-blue mb-6">Schedule a Free Consultation</h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                Take the first step toward digital marketing success by scheduling your free consultation.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="p-8 md:p-10">
+                  <h3 className="text-2xl font-semibold text-dark-blue mb-6">During this session, we'll:</h3>
+                  <ul className="space-y-4">
+                    {consultationBenefits.map((benefit, index) => (
+                      <li key={index} className="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-accent-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-700">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8">
+                    <a href="#contact-form" className="btn btn-primary inline-block">
+                      Schedule Now
+                    </a>
+                  </div>
+                </div>
+                <div className="relative bg-gradient-to-br from-navy-blue to-dark-blue hidden lg:block">
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
+                  </div>
+                  <div className="absolute top-10 right-10 w-32 h-32 bg-accent-orange rounded-full opacity-20 blur-xl"></div>
+                  <div className="absolute bottom-10 left-10 w-32 h-32 bg-blue-400 rounded-full opacity-20 blur-xl"></div>
+                  
+                  <div className="relative z-10 h-full flex items-center justify-center p-10">
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                        </svg>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">Expert Guidance</h3>
+                      <p className="text-gray-300">
+                        Our team of digital marketing experts will provide personalized insights and recommendations for your business.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information & Service Areas Section */}
+      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div>
+              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Contact Details</span>
+              <h2 className="heading-2 text-dark-blue mb-6">Contact Information</h2>
+              
+              <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-dark-blue mb-1">Phone</h3>
+                      <a href="tel:+14752644226" className="text-gray-700 hover:text-accent-orange transition-colors">
+                        (475) 264-4226
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-dark-blue mb-1">Email</h3>
+                      <a href="mailto:info@rizedigital.com" className="text-gray-700 hover:text-accent-orange transition-colors">
+                        info@rizedigital.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-dark-blue mb-1">Hours of Operation</h3>
+                      <p className="text-gray-700">Monday - Friday: 9:00 AM - 5:00 PM ET</p>
+                      <p className="text-gray-700">Saturday - Sunday: Closed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Service Areas */}
+            <div>
+              <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Coverage</span>
+              <h2 className="heading-2 text-dark-blue mb-6">Service Areas</h2>
+              
+              <div className="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-accent-orange opacity-5 rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-dark-blue">Nationwide Service</h3>
+                  </div>
+                  
+                  <p className="text-gray-700 mb-6">
+                    Rize Digital serves businesses nationwide. Our digital marketing strategies can be effectively implemented regardless of your location. We work with businesses of all sizes across the country, helping them achieve digital dominance in their respective markets.
+                  </p>
+                  
+                  <p className="text-gray-700 mb-6">
+                    From small towns to metropolitan cities, we have a proven formula to bring you more clients.
+                  </p>
+                  
+                  <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-accent-orange">
+                    <p className="text-gray-700 italic">
+                      "Our digital-first approach means we can deliver exceptional results for clients anywhere in the United States, with the same level of service and attention to detail."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section ref={addToRefs} id="contact-form" className="py-20 bg-gradient-to-b from-gray-50 to-white opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Get Started</span>
+              <h2 className="heading-2 text-dark-blue mb-6">Request More Information</h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                Please fill out the form below, and a member of our team will contact you shortly. We're committed to responding to all inquiries within one business day.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <form onSubmit={handleSubmit} className="p-8 md:p-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
+                      Full Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="companyName" className="block text-gray-700 font-medium mb-2">
+                      Company Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="companyName"
+                      name="companyName"
+                      value={formData.companyName}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                      placeholder="Your company"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                      placeholder="(123) 456-7890"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label htmlFor="website" className="block text-gray-700 font-medium mb-2">
+                      Website URL
+                    </label>
+                    <input
+                      type="url"
+                      id="website"
+                      name="website"
+                      value={formData.website}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                      placeholder="https://yourwebsite.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="serviceInterest" className="block text-gray-700 font-medium mb-2">
+                      Service Interest
+                    </label>
+                    <select
+                      id="serviceInterest"
+                      name="serviceInterest"
+                      value={formData.serviceInterest}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="Lead Generation">Lead Generation</option>
+                      <option value="Google Ads Management">Google Ads Management</option>
+                      <option value="Search Engine Optimization">Search Engine Optimization</option>
+                      <option value="Website Development">Website Development</option>
+                      <option value="AI-Powered Automations">AI-Powered Automations</option>
+                      <option value="Email Marketing">Email Marketing</option>
+                      <option value="Not Sure / Multiple Services">Not Sure / Multiple Services</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <label htmlFor="referralSource" className="block text-gray-700 font-medium mb-2">
+                    How did you hear about us?
+                  </label>
+                  <input
+                    type="text"
+                    id="referralSource"
+                    name="referralSource"
+                    value={formData.referralSource}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                    placeholder="Google, referral, social media, etc."
+                  />
+                </div>
+                
+                <div className="mb-6">
+                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                    Message / Additional Information
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-accent-orange transition-colors"
+                    placeholder="Tell us about your project or specific needs..."
+                  ></textarea>
+                </div>
+                
+                <div className="mb-8">
+                  <label className="block text-gray-700 font-medium mb-3">
+                    Preferred contact method
+                  </label>
+                  <div className="flex space-x-6">
+                    <div className="flex items-center">
+                      <input
+                        type="radio"
+                        id="contactEmail"
+                        name="preferredContact"
+                        value="email"
+                        checked={formData.preferredContact === 'email'}
+                        onChange={handleChange}
+                        className="w-4 h-4 text-accent-orange focus:ring-accent-orange"
+                      />
+                      <label htmlFor="contactEmail" className="ml-2 text-gray-700">
+                        Email
+                      </label>
+                    </div>
+                    <div className="flex items-center">
+                      <input
+                        type="radio"
+                        id="contactPhone"
+                        name="preferredContact"
+                        value="phone"
+                        checked={formData.preferredContact === 'phone'}
+                        onChange={handleChange}
+                        className="w-4 h-4 text-accent-orange focus:ring-accent-orange"
+                      />
+                      <label htmlFor="contactPhone" className="ml-2 text-gray-700">
+                        Phone
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center">
+                  <button
+                    type="submit"
+                    className="btn btn-primary px-8 py-3 text-lg"
+                  >
+                    Submit Request
+                  </button>
+                </div>
+                
+                <p className="text-center text-sm text-gray-500 mt-6">
+                  <span className="text-red-500">*</span> Required fields
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Connect With Us Section */}
+      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-4 py-1 bg-orange-100 text-accent-orange rounded-full text-sm font-medium mb-4">Stay Connected</span>
+            <h2 className="heading-2 text-dark-blue mb-6">Connect With Us</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-12">
+              Follow Rize Digital on social media to stay updated on digital marketing trends, tips, and company news.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-8">
+              {socialMedia.map((platform, index) => (
+                <a 
+                  key={index}
+                  href={platform.url}
+                  className="flex flex-col items-center group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-3 group-hover:bg-navy-blue transition-colors duration-300">
+                    <div className="text-gray-600 group-hover:text-white transition-colors duration-300" dangerouslySetInnerHTML={{ __html: platform.icon }} />
+                  </div>
+                  <span className="text-gray-700 group-hover:text-accent-orange transition-colors duration-300">{platform.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section ref={addToRefs} className="py-20 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1 bg-blue-100 text-navy-blue rounded-full text-sm font-medium mb-4">Questions</span>
+              <h2 className="heading-2 text-dark-blue mb-6">Frequently Asked Questions</h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                Find answers to common questions about our services and approach.
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div 
+                  key={index}
+                  className="bg-white rounded-xl shadow-md overflow-hidden"
+                >
+                  <button
+                    className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                    onClick={() => toggleFaq(index)}
+                  >
+                    <h3 className="text-lg font-semibold text-dark-blue">{faq.question}</h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`h-6 w-6 text-accent-orange transition-transform duration-300 ${openFaq === index ? 'transform rotate-180' : ''}`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  <div 
+                    className={`px-6 pb-4 transition-all duration-300 ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+                  >
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section ref={addToRefs} className="py-20 opacity-0 transition-opacity duration-1000">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="heading-2 text-dark-blue mb-6">Ready to Get Started?</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-10">
+              Contact Rize Digital today and take the first step toward transforming your digital marketing strategy and achieving industry dominance.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="#contact-form" className="btn btn-primary text-center px-8 py-3 text-lg">
+                Schedule Your Consultation
+              </a>
+              <a href="tel:+14752644226" className="btn bg-navy-blue text-white hover:bg-blue-800 text-center px-8 py-3 text-lg">
+                Call Us Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <CTASection 
+        heading="Transform Your Digital Presence Today"
+        subheading="Partner with Rize Digital for strategic, results-driven digital marketing solutions."
+      />
+    </>
+  );
+};
+
+export default Contact;
