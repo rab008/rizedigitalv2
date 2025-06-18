@@ -1,19 +1,41 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 /**
  * Header component for the Rize Digital website
  * Contains the navigation menu and logo
+ * Enhanced with sticky scroll functionality
  */
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll event to add shadow and background opacity
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="bg-dark-blue text-white py-4">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-dark-blue shadow-lg py-2' 
+        : 'bg-dark-blue bg-opacity-95 py-4'
+    }`}>
       <div className="container flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
@@ -27,10 +49,10 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="hover:text-accent-orange transition-colors">Home</Link>
-          <Link to="/about" className="hover:text-accent-orange transition-colors">About Us</Link>
-          <Link to="/services" className="hover:text-accent-orange transition-colors">Services</Link>
-          <Link to="/contact" className="hover:text-accent-orange transition-colors">Contact</Link>
+          <Link to="/" className="text-white hover:text-accent-orange transition-colors">Home</Link>
+          <Link to="/about" className="text-white hover:text-accent-orange transition-colors">About Us</Link>
+          <Link to="/services" className="text-white hover:text-accent-orange transition-colors">Services</Link>
+          <Link to="/contact" className="text-white hover:text-accent-orange transition-colors">Contact</Link>
         </nav>
 
         {/* Contact Info */}
@@ -57,12 +79,12 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-dark-blue z-50 md:hidden">
+          <div className="absolute top-full left-0 right-0 bg-dark-blue z-50 md:hidden shadow-lg">
             <div className="container py-4 flex flex-col space-y-4">
-              <Link to="/" className="hover:text-accent-orange transition-colors">Home</Link>
-              <Link to="/about" className="hover:text-accent-orange transition-colors">About Us</Link>
-              <Link to="/services" className="hover:text-accent-orange transition-colors">Services</Link>
-              <Link to="/contact" className="hover:text-accent-orange transition-colors">Contact</Link>
+              <Link to="/" className="text-white hover:text-accent-orange transition-colors">Home</Link>
+              <Link to="/about" className="text-white hover:text-accent-orange transition-colors">About Us</Link>
+              <Link to="/services" className="text-white hover:text-accent-orange transition-colors">Services</Link>
+              <Link to="/contact" className="text-white hover:text-accent-orange transition-colors">Contact</Link>
               <a href="tel:+1234567890" className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

@@ -2,12 +2,47 @@ import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
+import { useEffect, useRef } from 'react';
 
 /**
  * Home page component for Rize Digital website
  * Includes hero section, services, testimonials, and CTA
  */
 const Home = () => {
+  // Refs for scroll animations
+  const sectionRefs = useRef([]);
+  
+  // Simple scroll animation effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+    
+    return () => {
+      sectionRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+  
+  // Add ref to section for animation
+  const addToRefs = (el) => {
+    if (el && !sectionRefs.current.includes(el)) {
+      sectionRefs.current.push(el);
+    }
+  };
   // Services data
   const services = [
     {
@@ -89,7 +124,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-dark-blue text-white py-16 md:py-24">
+      <section ref={addToRefs} className="bg-dark-blue text-white py-16 md:py-24 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -130,7 +165,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50">
+      <section ref={addToRefs} className="py-16 bg-gray-50 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="heading-2 text-dark-blue mb-4">Our Services</h2>
@@ -160,7 +195,7 @@ const Home = () => {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-16">
+      <section ref={addToRefs} className="py-16 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -205,7 +240,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50">
+      <section ref={addToRefs} className="py-16 bg-gray-50 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="heading-2 text-dark-blue mb-4">What Our Clients Say</h2>
@@ -230,7 +265,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16">
+      <section ref={addToRefs} className="py-16 opacity-0 transition-opacity duration-1000">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
