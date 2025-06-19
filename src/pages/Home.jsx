@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
+import GHLForm from '../components/GHLForm';
 import { useEffect, useRef } from 'react';
 
 /**
@@ -46,53 +47,64 @@ const Home = () => {
   // Services data
   const services = [
     {
-      title: "Website Development",
-      description: "Custom, responsive websites designed to convert visitors into customers. We focus on user experience, performance, and SEO-friendly code.",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>`,
-      link: "/services/web-development"
-    },
-    {
       title: "SEO",
       description: "Improve your search engine rankings and drive organic traffic with our data-driven SEO strategies tailored to your business goals.",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12" />
-      </svg>`,
+      icon: ` <img 
+                  src="/rizedigitalv2/images/seo_optimization_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
       link: "/services/seo"
-    },
-    {
-      title: "AI & Automations",
-      description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-      </svg>`,
-      link: "/services/copywriting"
-    },
-    {
-      title: "Digital Marketing",
-      description: "Comprehensive digital marketing strategies that increase brand awareness, engage your audience, and drive measurable results.",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-      </svg>`,
-      link: "/services/digital-marketing"
-    },
-    {
-      title: "PPC Advertising",
-      description: "Targeted pay-per-click campaigns that maximize your ROI. We create, manage, and optimize ads that reach your ideal customers.",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-      </svg>`,
-      link: "/services/ppc"
     },
     {
       title: "Google Ads",
       description: "Expert Google Ads management to drive qualified traffic and increase conversions. We optimize your campaigns for maximum performance.",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>`,
+      icon: ` <img 
+                  src="/rizedigitalv2/images/lead_generation_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
       link: "/services/google-ads"
+    },
+    {
+      title: "Lead Generation",
+      description: "Deliver a predictable stream of high-quality prospects ready to book, buy, or call. We combine multi-channel traffic, conversion-optimized landing pages, and disciplined follow-up to keep your pipeline full.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/results_driven_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/lead-generation"
+    },
+    {
+      title: "AI & Automations",
+      description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/ai_automations_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/automations"
+    },
+    {
+      title: "PPC Advertising",
+      description: "Targeted pay-per-click campaigns that maximize your ROI. We create, manage, and optimize ads that reach your ideal customers.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/exclusive_partnership_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/ppc"
+    },
+    {
+      title: "Website Development",
+      description: "Custom, responsive websites designed to convert visitors into customers. We focus on user experience, performance, and SEO-friendly code.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/wordpress_development_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/web-development"
     }
   ];
 
@@ -143,23 +155,17 @@ const Home = () => {
                 </Link>
               </div>
               <div className="mt-8 flex items-center">
-                <p className="text-gray-300 mr-4">Trusted by leading brands:</p>
                 <div className="flex space-x-6">
                   {/* Placeholder for client logos */}
-                  <div className="h-8 w-16 bg-gray-700 rounded opacity-70"></div>
-                  <div className="h-8 w-16 bg-gray-700 rounded opacity-70"></div>
-                  <div className="h-8 w-16 bg-gray-700 rounded opacity-70"></div>
+                    <img 
+                      src="/rizedigitalv2/images/google_review_5_start.webp" 
+                      alt="Google 5 star rating" 
+                      className="rounded opacity-70 h-12"
+                    />
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block">
-              {/* Placeholder for hero image */}
-                <img 
-                  src="/rizedigitalv2/images/hero_section_illustration.jpg" 
-                  alt="team collaboration" 
-                  className='rounded-lg'
-                />
-            </div>
+           <GHLForm />
           </div>
         </div>
       </section>
@@ -230,7 +236,7 @@ const Home = () => {
             <div className="order-first lg:order-last">
               {/* Placeholder for about image */}
                 <img 
-                  src="/rizedigitalv2/images/team_collaboration_image.jpg" 
+                  src="/rizedigitalv2/images/Infographic_Graphic_Organizer.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />

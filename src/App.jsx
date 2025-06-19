@@ -13,6 +13,7 @@ import Automations from './pages/Automations';
 import SEO from './pages/SEO';
 import GoogleAds from './pages/GoogleAds';
 import LeadGeneration from './pages/LeadGeneration';
+import WebDevelopment from './pages/WebDevelopment';
 import ScrollToTop from './components/ScrollToTop';
 
 /**
@@ -33,6 +34,7 @@ function App() {
           <Route path="services/seo" element={<SEO />} />
           <Route path="services/google-ads" element={<GoogleAds />} />
           <Route path="services/lead-generation" element={<LeadGeneration />} />
+          <Route path="services/web-development" element={<WebDevelopment />} />
           <Route path="contact" element={<Contact />} />
           <Route path="case-study" element={<CaseStudy />} />
           <Route path="case-study-library" element={<CaseStudyLibrary />} />

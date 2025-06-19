@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import CTASection from '../components/CTASection';
+import ServiceCard from '../components/ServiceCard';
 import { useEffect, useRef } from 'react';
 
 /**
@@ -44,42 +44,91 @@ const Services = () => {
   };
 
   // Services data from the provided document
-  const services = [
+ const services = [
     {
-      title: "Lead Generation",
-      description: "Deliver a predictable stream of high-quality prospects ready to book, buy, or call. We combine multi-channel traffic, conversion-optimized landing pages, and disciplined follow-up to keep your pipeline full.",
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>',
-      link: "/services/lead-generation"
-    },
-    {
-      title: "Search Engine Optimization (SEO)",
-      description: "From technical fixes to content that answers every customer question, our SEO program positions you as the undisputed authority in every service area you target.",
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>',
+      title: "SEO",
+      description: "Improve your search engine rankings and drive organic traffic with our data-driven SEO strategies tailored to your business goals.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/seo_optimization_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
       link: "/services/seo"
     },
     {
-      title: "WordPress Website Development",
-      description: "Lightning-fast, fully custom WordPress builds—no bloated themes, no compromises. Designed for Core Web Vitals, conversion, and limitless scalability.",
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>',
-      link: "/services/website-development"
-    },
-    {
-      title: "Google Ads Management",
-      description: "Immediate visibility meets disciplined bidding and relentless optimization. Whether you need pure pay-per-click performance or our \"Jump-Start & Redeploy\" growth model, we turn ad spend into profit.",
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" /></svg>',
+      title: "Google Ads",
+      description: "Expert Google Ads management to drive qualified traffic and increase conversions. We optimize your campaigns for maximum performance.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/lead_generation_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
       link: "/services/google-ads"
     },
     {
-      title: "AI-Powered Automations",
-      description: "Replace repetitive tasks with intelligent workflows. From 24/7 AI chat and voice bots to automated lead routing and post-job review requests, we help you reclaim time and scale faster.",
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>',
+      title: "Lead Generation",
+      description: "Deliver a predictable stream of high-quality prospects ready to book, buy, or call. We combine multi-channel traffic, conversion-optimized landing pages, and disciplined follow-up to keep your pipeline full.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/results_driven_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/lead-generation"
+    },
+    {
+      title: "AI & Automations",
+      description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/ai_automations_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
       link: "/services/automations"
     },
     {
-      title: "Email Marketing & List Building",
-      description: "Build a clean, segmented list and nurture it with targeted, automated campaigns that convert first-time buyers into lifelong customers.",
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>',
-      link: "/services/email-marketing"
+      title: "PPC Advertising",
+      description: "Targeted pay-per-click campaigns that maximize your ROI. We create, manage, and optimize ads that reach your ideal customers.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/exclusive_partnership_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/ppc"
+    },
+    {
+      title: "Website Development",
+      description: "Custom, responsive websites designed to convert visitors into customers. We focus on user experience, performance, and SEO-friendly code.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/wordpress_development_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/web-development"
+    }
+  ];
+
+  // Testimonials data
+  const testimonials = [
+    {
+      quote: "Rize Digital transformed our online presence completely. Their strategic approach to digital marketing has resulted in a 200% increase in qualified leads within just 3 months.",
+      name: "Sarah Johnson",
+      position: "Marketing Director",
+      company: "TechSolutions Inc.",
+      image: "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+      quote: "The website Rize Digital built for us not only looks fantastic but also converts visitors at an impressive rate. Their attention to detail and focus on user experience is unmatched.",
+      name: "Michael Chen",
+      position: "CEO",
+      company: "Innovate Labs",
+      image: "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      quote: "Working with Rize Digital on our SEO strategy has been a game-changer. We're now ranking on the first page for all our key terms, and our organic traffic has increased by 150%.",
+      name: "Emily Rodriguez",
+      position: "E-commerce Manager",
+      company: "StyleHouse",
+      image: "https://randomuser.me/api/portraits/women/3.jpg"
     }
   ];
 
@@ -113,51 +162,25 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Section - Enhanced with modern card design */}
-      <section ref={addToRefs} className="py-20 bg-gray-50 opacity-0 transition-opacity duration-1000">
+       {/* Services Section */}
+      <section ref={addToRefs} className="py-16 bg-gray-50 opacity-0 transition-opacity duration-1000">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="text-lg text-gray-600 mb-6">
-              Explore our core offerings below and see how each one drives measurable growth.
+          <div className="text-center mb-12">
+            <h2 className="heading-2 text-dark-blue mb-4">Our Services</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+             Our Full Stack Marketing Solutions can supercharge your business. We know exactly how to save you time and money. 
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-100 h-full flex flex-col"
-              >
-                <div className="p-8">
-                  <div className="w-16 h-16 bg-orange-50 rounded-lg flex items-center justify-center mb-6 text-accent-orange">
-                    <div dangerouslySetInnerHTML={{ __html: service.icon }} />
-                  </div>
-                  
-                  <h2 className="text-2xl font-semibold text-dark-blue mb-4">{service.title}</h2>
-                  <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
-                  
-                  <Link 
-                    to={service.link} 
-                    className="inline-flex items-center text-navy-blue font-medium hover:text-accent-orange transition-colors"
-                  >
-                    Learn more
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-5 w-5 ml-2" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
+              <ServiceCard 
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                link={service.link}
+              />
             ))}
           </div>
         </div>

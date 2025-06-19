@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
  */
 const ServiceCard = ({ title, description, icon, link }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border border-gray-100 h-full flex flex-col">
+    <div className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border border-gray-100 h-full flex flex-col hover:-translate-y-2 hover:shadow-xl">
       <div className="mb-4 text-accent-orange">
         {/* Render the icon */}
         <div dangerouslySetInnerHTML={{ __html: icon }} className="w-12 h-12" />

@@ -53,7 +53,7 @@ const CaseStudyLibrary = () => {
         "[% drop] cost-per-lead",
         "territory expansion to three counties in 90 days"
       ],
-      image: "/images/case-studies/king-land-clearing.jpg",
+      image: "/rizedigitalv2/images/Bomann-case-study.jpg",
       link: "/case-study/king-land-clearing"
     },
     {
@@ -65,7 +65,7 @@ const CaseStudyLibrary = () => {
         "[% boost] booked jobs",
         "#1 rankings for 20 high-intent keywords"
       ],
-      image: "/images/case-studies/wards-excavation.jpg",
+      image: "/rizedigitalv2/images/Bomann-case-study.jpg",
       link: "/case-study/wards-excavation"
     },
     {
@@ -77,7 +77,7 @@ const CaseStudyLibrary = () => {
         "[% ROI] on Google Ads",
         "first-page positions across five counties"
       ],
-      image: "/images/case-studies/bomann-fencing.jpg",
+      image: "/rizedigitalv2/images/Bomann-case-study.jpg",
       link: "/case-study/bomann-fencing"
     }
   ];
@@ -115,9 +115,11 @@ const CaseStudyLibrary = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
                 <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto text-navy-blue">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                 <img 
+                    src="/rizedigitalv2/images/verified_metrics_icon.jpg" 
+                    alt="team collaboration" 
+                    className="h-10 w-10 rounded"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-dark-blue mb-3">Verified Metrics</h3>
                 <p className="text-gray-600">Pulled straight from GA4, SEMrush, and CRM dashboards.</p>
@@ -125,9 +127,11 @@ const CaseStudyLibrary = () => {
               
               <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
                 <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto text-navy-blue">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                  </svg>
+                  <img 
+                    src="/rizedigitalv2/images/transparent_tactics_icon.jpg" 
+                    alt="team collaboration" 
+                    className="h-10 w-10 rounded"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-dark-blue mb-3">Transparent Tactics</h3>
                 <p className="text-gray-600">Every lever we pulled is documented so you can replicate or adapt it.</p>
@@ -135,9 +139,11 @@ const CaseStudyLibrary = () => {
               
               <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
                 <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto text-navy-blue">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
+                  <img 
+                    src="/rizedigitalv2/images/exclusive_partner_icon.jpg" 
+                    alt="team collaboration" 
+                    className="h-10 w-10 rounded"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-dark-blue mb-3">Exclusive-Partner Model</h3>
                 <p className="text-gray-600">Once we help a client dominate a territory, we won't work with direct competitors there.</p>
@@ -161,11 +167,13 @@ const CaseStudyLibrary = () => {
                   className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl border border-gray-100"
                 >
                   <div className="md:flex">
-                    <div className="md:w-1/3 bg-gray-100 flex items-center justify-center p-8">
-                      <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center text-navy-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
+                    <div className="md:w-1/3 bg-gray-100 flex items-center justify-center p-4">
+                      <div className="bg-blue-50 rounded-full flex items-center justify-center text-navy-blue">
+                          <img 
+                          src={study.image} 
+                          alt="team collaboration" 
+                          className="rounded-lg"
+                        />
                       </div>
                     </div>
                     
