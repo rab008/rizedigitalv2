@@ -98,7 +98,7 @@ const Header = () => {
             </svg>
             (123) 456-7890
           </a>
-          <a href="#" className="btn btn-primary text-sm">Get Quote</a>
+          <Link to="/contact" className="btn btn-primary text-sm">Get Quote</Link>
         </div>
 
         {/* Mobile Menu Button */}

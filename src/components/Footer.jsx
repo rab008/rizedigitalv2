@@ -66,12 +66,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services/web-development" className="text-gray-300 hover:text-accent-orange transition-colors">Website Development</Link></li>
               <li><Link to="/services/seo" className="text-gray-300 hover:text-accent-orange transition-colors">SEO</Link></li>
-              <li><Link to="/services/copywriting" className="text-gray-300 hover:text-accent-orange transition-colors">Copywriting</Link></li>
-              <li><Link to="/services/digital-marketing" className="text-gray-300 hover:text-accent-orange transition-colors">Digital Marketing</Link></li>
-              <li><Link to="/services/ppc" className="text-gray-300 hover:text-accent-orange transition-colors">PPC Advertising</Link></li>
               <li><Link to="/services/google-ads" className="text-gray-300 hover:text-accent-orange transition-colors">Google Ads</Link></li>
+              <li><Link to="/services/lead-generation" className="text-gray-300 hover:text-accent-orange transition-colors">Lead Generation</Link></li>
+              <li><Link to="/services/automations" className="text-gray-300 hover:text-accent-orange transition-colors">AI & Automations</Link></li>
+              <li><Link to="/services/ppc" className="text-gray-300 hover:text-accent-orange transition-colors">PPC Advertising</Link></li>
+              <li><Link to="/services/web-development" className="text-gray-300 hover:text-accent-orange transition-colors">Website Development</Link></li>
             </ul>
           </div>
 
