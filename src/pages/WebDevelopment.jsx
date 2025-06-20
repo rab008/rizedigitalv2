@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import CTASection from '../components/CTASection';
 
 /**
  * Web Development service page component
@@ -414,9 +413,6 @@ const WebDevelopment = () => {
           </div>
         </div>
       </section>
-
-      {/* Additional CTA Section */}
-      <CTASection />
     </>
   );
 };

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import CTASection from '../components/CTASection';
 
 /**
  * Lead Generation service page component
@@ -405,9 +404,6 @@ const LeadGeneration = () => {
           </div>
         </div>
       </section>
-
-      {/* Additional CTA Section */}
-      <CTASection />
     </>
   );
 };

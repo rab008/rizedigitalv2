@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import CTASection from '../components/CTASection';
 
 /**
  * SEO service page component
@@ -346,9 +345,6 @@ const SEO = () => {
           </div>
         </div>
       </section>
-
-      {/* Additional CTA Section */}
-      <CTASection />
     </>
   );
 };

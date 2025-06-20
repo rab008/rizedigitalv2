@@ -5,7 +5,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import CaseStudy from './pages/CaseStudy';
-import CaseStudyLibrary from './pages/CaseStudyLibrary';
 import KingLandClearingCaseStudy from './pages/KingLandClearingCaseStudy';
 import WardsExcavationCaseStudy from './pages/WardsExcavationCaseStudy';
 import BomannFencingCaseStudy from './pages/BomannFencingCaseStudy';
@@ -37,7 +36,6 @@ function App() {
           <Route path="services/web-development" element={<WebDevelopment />} />
           <Route path="contact" element={<Contact />} />
           <Route path="case-study" element={<CaseStudy />} />
-          <Route path="case-study-library" element={<CaseStudyLibrary />} />
           <Route path="case-study/king-land-clearing" element={<KingLandClearingCaseStudy />} />
           <Route path="case-study/wards-excavation" element={<WardsExcavationCaseStudy />} />
           <Route path="case-study/bomann-fencing" element={<BomannFencingCaseStudy />} />

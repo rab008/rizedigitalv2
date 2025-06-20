@@ -66,19 +66,21 @@ const Header = () => {
               <Link to="/services/google-ads" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Google Ads</Link>
               <Link to="/services/lead-generation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lead Generation</Link>
               <Link to="/services/automations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Automations</Link>
+              <Link to="/services/ppc" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">PPC Advertising</Link>
+              <Link to="/services/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Website Development</Link>
             </div>
           </div>
           
           {/* Case Study Dropdown */}
           <div className="relative group">
-            <Link to="/case-study-library" className="text-white hover:text-accent-orange transition-colors flex items-center">
+            <Link to="/case-study" className="text-white hover:text-accent-orange transition-colors flex items-center">
               Case Studies
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-              <Link to="/case-study-library" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Case Study Library</Link>
+              <Link to="/case-study" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All Case Studies</Link>
               <Link to="/case-study/king-land-clearing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">King Land Clearing</Link>
               <Link to="/case-study/wards-excavation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ward's Excavation</Link>
               <Link to="/case-study/bomann-fencing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bomann Fencing</Link>
@@ -132,6 +134,8 @@ const Header = () => {
                     <Link to="/services/google-ads" className="block text-white hover:text-accent-orange transition-colors">Google Ads</Link>
                     <Link to="/services/lead-generation" className="block text-white hover:text-accent-orange transition-colors">Lead Generation</Link>
                     <Link to="/services/automations" className="block text-white hover:text-accent-orange transition-colors">Automations</Link>
+                    <Link to="/services/ppc" className="block text-white hover:text-accent-orange transition-colors">PPC Advertising</Link>
+                    <Link to="/services/web-development" className="block text-white hover:text-accent-orange transition-colors">Website Development</Link>
                   </div>
                 )}
               </div>
@@ -139,7 +143,7 @@ const Header = () => {
               {/* Mobile Case Study Dropdown */}
               <div className="space-y-2">
                 <div className="flex items-center justify-between" onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)}>
-                  <Link to="/case-study-library" className="text-white hover:text-accent-orange transition-colors">Case Studies</Link>
+                  <Link to="/case-study" className="text-white hover:text-accent-orange transition-colors">Case Studies</Link>
                   <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 text-white transition-transform ${mobileSubmenuOpen ? 'transform rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -147,7 +151,6 @@ const Header = () => {
                 
                 {mobileSubmenuOpen && (
                   <div className="pl-4 space-y-2 border-l border-gray-700">
-                    <Link to="/case-study-library" className="block text-white hover:text-accent-orange transition-colors">Case Study Library</Link>
                     <Link to="/case-study/king-land-clearing" className="block text-white hover:text-accent-orange transition-colors">King Land Clearing</Link>
                     <Link to="/case-study/wards-excavation" className="block text-white hover:text-accent-orange transition-colors">Ward's Excavation</Link>
                     <Link to="/case-study/bomann-fencing" className="block text-white hover:text-accent-orange transition-colors">Bomann Fencing</Link>
