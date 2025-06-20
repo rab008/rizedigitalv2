@@ -45,15 +45,25 @@ const Services = () => {
 
   // Services data from the provided document
  const services = [
-    {
-      title: "SEO",
-      description: "Improve your search engine rankings and drive organic traffic with our data-driven SEO strategies tailored to your business goals.",
+  {
+      title: "AI & Automations",
+      description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/seo_optimization_icon.jpg" 
+                  src="/rizedigitalv2/images/ai_automations_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
-      link: "/services/seo"
+      link: "/services/automations"
+    },
+    {
+      title: "Email Marketing",
+      description: "Strategic email campaigns that convert prospects, engage customers, and drive revenue. Our data-driven approach delivers personalized customer journeys with measurable results.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/exclusive_partner_icon.jpg" 
+                  alt="email marketing" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/email-marketing"
     },
     {
       title: "Google Ads",
@@ -76,24 +86,14 @@ const Services = () => {
       link: "/services/lead-generation"
     },
     {
-      title: "AI & Automations",
-      description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
+      title: "SEO",
+      description: "Improve your search engine rankings and drive organic traffic with our data-driven SEO strategies tailored to your business goals.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/ai_automations_icon.jpg" 
+                  src="/rizedigitalv2/images/seo_optimization_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
-      link: "/services/automations"
-    },
-    {
-      title: "PPC Advertising",
-      description: "Targeted pay-per-click campaigns that maximize your ROI. We create, manage, and optimize ads that reach your ideal customers.",
-      icon: ` <img 
-                  src="/rizedigitalv2/images/exclusive_partnership_icon.jpg" 
-                  alt="team collaboration" 
-                  className="rounded-lg"
-                />`,
-      link: "/services/ppc"
+      link: "/services/seo"
     },
     {
       title: "Website Development",
@@ -104,6 +104,16 @@ const Services = () => {
                   className="rounded-lg"
                 />`,
       link: "/services/web-development"
+    },
+    {
+      title: "PPC Advertising",
+      description: "Targeted pay-per-click campaigns that maximize your ROI. We create, manage, and optimize ads that reach your ideal customers.",
+      icon: ` <img 
+                  src="/rizedigitalv2/images/exclusive_partnership_icon.jpg" 
+                  alt="team collaboration" 
+                  className="rounded-lg"
+                />`,
+      link: "/services/ppc"
     }
   ];
 

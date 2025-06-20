@@ -66,7 +66,7 @@ const Header = () => {
               <Link to="/services/google-ads" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Google Ads</Link>
               <Link to="/services/lead-generation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lead Generation</Link>
               <Link to="/services/automations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Automations</Link>
-              <Link to="/services/ppc" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">PPC Advertising</Link>
+              <Link to="/services/email-marketing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Email Marketing</Link>
               <Link to="/services/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Website Development</Link>
             </div>
           </div>
@@ -134,7 +134,7 @@ const Header = () => {
                     <Link to="/services/google-ads" className="block text-white hover:text-accent-orange transition-colors">Google Ads</Link>
                     <Link to="/services/lead-generation" className="block text-white hover:text-accent-orange transition-colors">Lead Generation</Link>
                     <Link to="/services/automations" className="block text-white hover:text-accent-orange transition-colors">Automations</Link>
-                    <Link to="/services/ppc" className="block text-white hover:text-accent-orange transition-colors">PPC Advertising</Link>
+                    <Link to="/services/email-marketing" className="block text-white hover:text-accent-orange transition-colors">Email Marketing</Link>
                     <Link to="/services/web-development" className="block text-white hover:text-accent-orange transition-colors">Website Development</Link>
                   </div>
                 )}

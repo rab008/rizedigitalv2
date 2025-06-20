@@ -5,14 +5,15 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import CaseStudy from './pages/CaseStudy';
-import KingLandClearingCaseStudy from './pages/KingLandClearingCaseStudy';
-import WardsExcavationCaseStudy from './pages/WardsExcavationCaseStudy';
-import BomannFencingCaseStudy from './pages/BomannFencingCaseStudy';
-import Automations from './pages/Automations';
-import SEO from './pages/SEO';
-import GoogleAds from './pages/GoogleAds';
-import LeadGeneration from './pages/LeadGeneration';
-import WebDevelopment from './pages/WebDevelopment';
+import KingLandClearingCaseStudy from './pages/case-studies/KingLandClearingCaseStudy';
+import WardsExcavationCaseStudy from './pages/case-studies/WardsExcavationCaseStudy';
+import BomannFencingCaseStudy from './pages/case-studies/BomannFencingCaseStudy';
+import Automations from './pages/services/Automations';
+import SEO from './pages/services/SEO';
+import GoogleAds from './pages/services/GoogleAds';
+import EmailMarketing from './pages/services/EmailMarketing';
+import LeadGeneration from './pages/services/LeadGeneration';
+import WebDevelopment from './pages/services/WebDevelopment';
 import ScrollToTop from './components/ScrollToTop';
 
 /**
@@ -34,6 +35,7 @@ function App() {
           <Route path="services/google-ads" element={<GoogleAds />} />
           <Route path="services/lead-generation" element={<LeadGeneration />} />
           <Route path="services/web-development" element={<WebDevelopment />} />
+          <Route path="services/email-marketing" element={<EmailMarketing />} />
           <Route path="contact" element={<Contact />} />
           <Route path="case-study" element={<CaseStudy />} />
           <Route path="case-study/king-land-clearing" element={<KingLandClearingCaseStudy />} />

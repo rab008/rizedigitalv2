@@ -24,7 +24,7 @@ const ServiceCard = ({ title, description, icon, link }) => {
         to={link} 
         className="text-navy-blue font-medium hover:text-accent-orange transition-colors flex items-center mt-auto"
       >
-        Learn More
+        See How It Works
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           className="h-4 w-4 ml-1" 
