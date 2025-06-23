@@ -14,7 +14,7 @@ const GHLForm = () => {
   }, []);
 
   return (
-    <div style={{ width: '100%', height: '666px' }}>
+    <div style={{ width: '100%', height: 'auto' }}>
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/dCE4nuTtdFETlwxbzmWK"
         style={{
