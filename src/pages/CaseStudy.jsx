@@ -53,7 +53,7 @@ const CaseStudyLibrary = () => {
         "[% drop] cost-per-lead",
         "territory expansion to three counties in 90 days"
       ],
-      image: "/rizedigitalv2/images/Bomann-case-study.jpg",
+      image: "/rizedigitalv2/images/kinglandclearing.jpg",
       link: "/case-study/king-land-clearing"
     },
     {
@@ -65,7 +65,7 @@ const CaseStudyLibrary = () => {
         "[% boost] booked jobs",
         "#1 rankings for 20 high-intent keywords"
       ],
-      image: "/rizedigitalv2/images/Bomann-case-study.jpg",
+      image: "/rizedigitalv2/images/ward-ex.webp",
       link: "/case-study/wards-excavation"
     },
     {
