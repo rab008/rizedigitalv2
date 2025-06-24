@@ -350,8 +350,6 @@ const KingLandClearingCaseStudy = () => {
           </div>
         </div>
       </section>
-           {/* CTA Section */}
-      <CTASection />
     </>
   );
 };
