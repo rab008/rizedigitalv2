@@ -366,6 +366,47 @@ const WardsExcavationCaseStudy = () => {
         </div>
       </section>
 
+       {/* Results Showcase Section */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="heading-2 text-dark-blue mb-8">Ward’s Excavation</h2>
+            
+            <div className="bg-gray-50 rounded-xl shadow-md overflow-hidden">
+              <div className="flex flex-col">
+                {/* Full width image container */}
+                <div className="w-full flex justify-center p-6 bg-white">
+                  <img 
+                    src="/rizedigitalv2/images/ward-results.jpg" 
+                    alt="ward excavation Case Study" 
+                    className="max-h-[400px] object-scale-down"
+                  />
+                </div>
+                {/* Content below image */}
+                <div className="p-8">
+                  <p className="text-gray-700 leading-relaxed">
+                    Ward’s Excavation doesn’t turn wrenches for small residential jobs, they specialize in large-scale land clearing and full site-prep projects. Our strategy zeroed in on that exact clientele. By pairing hyper-targeted SEO with laser-focused Google Ads and direct outreach to major developers, we filtered out low-value leads and landed a multi-million-dollar land-clearing and site-prep contract, plus a steady pipeline of comparable projects. The result: their crews stay booked on high-margin work perfectly matched to their heavy-equipment capabilities.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-semibold text-dark-blue">Proven Results</h4>
+                        <p className="text-gray-600 text-sm">Measurable impact through strategic digital marketing</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Conclusion Section */}
       <section id="conclusion" className="py-16 bg-white">
         <div className="container">

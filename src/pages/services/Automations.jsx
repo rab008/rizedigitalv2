@@ -123,13 +123,13 @@ const Automations = () => {
 
   // Industries data
   const industries = [
-    "Tree services",
-    "Fencing contractors",
-    "Excavation companies",
-    "Demolition contractors",
-    "Dumpster rental businesses",
-    "Home improvement contractors",
-    "Agricultural services",
+    "Tree Services",
+    "Fencing Contractors",
+    "Excavation Companies",
+    "Demolition Contractors",
+    "Dumpster Rental Businesses",
+    "Home Improvement Contractors",
+    "Agricultural Services",
     "And many other service-based industries"
   ];
 
@@ -329,7 +329,7 @@ const Automations = () => {
                         key={index} 
                         className="bg-white bg-opacity-10 rounded-lg p-4 text-center transform transition-all duration-300 hover:-translate-y-1"
                       >
-                        <span className="text-white font-medium">{industry}</span>
+                        <span className="text-white font-medium capitalize">{industry}</span>
                       </div>
                     ))}
                   </div>

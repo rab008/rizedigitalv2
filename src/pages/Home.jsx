@@ -275,8 +275,8 @@ const Home = () => {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent-orange mb-2">500+</div>
-              <p className="text-gray-600">Projects Completed</p>
+              <div className="text-4xl font-bold text-accent-orange mb-2">2000+</div>
+              <p className="text-gray-600">Qualified Leads</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-accent-orange mb-2">98%</div>

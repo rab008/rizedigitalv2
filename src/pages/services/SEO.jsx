@@ -314,7 +314,7 @@ const SEO = () => {
                         key={index} 
                         className="bg-white bg-opacity-10 rounded-lg p-4 text-center transform transition-all duration-300 hover:-translate-y-1"
                       >
-                        <span className="text-white font-medium">{industry}</span>
+                        <span className="text-white font-medium capitalize">{industry}</span>
                       </div>
                     ))}
                   </div>

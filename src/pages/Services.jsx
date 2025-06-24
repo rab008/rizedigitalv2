@@ -104,16 +104,6 @@ const Services = () => {
                   className="rounded-lg"
                 />`,
       link: "/services/web-development"
-    },
-    {
-      title: "PPC Advertising",
-      description: "Targeted pay-per-click campaigns that maximize your ROI. We create, manage, and optimize ads that reach your ideal customers.",
-      icon: ` <img 
-                  src="/rizedigitalv2/images/exclusive_partnership_icon.jpg" 
-                  alt="team collaboration" 
-                  className="rounded-lg"
-                />`,
-      link: "/services/ppc"
     }
   ];
 
