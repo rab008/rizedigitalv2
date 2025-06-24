@@ -112,24 +112,24 @@ const Home = () => {
   const testimonials = [
     {
       quote: "Rize Digital transformed our online presence completely. Their strategic approach to digital marketing has resulted in a 200% increase in qualified leads within just 3 months.",
-      name: "Sarah Johnson",
+      name: "Tyrone Jackson",
       position: "Marketing Director",
       company: "TechSolutions Inc.",
-      image: "https://randomuser.me/api/portraits/women/1.jpg"
+      image: "/rizedigitalv2/images/Tyrone_Jackson.jpg"
     },
     {
       quote: "The website Rize Digital built for us not only looks fantastic but also converts visitors at an impressive rate. Their attention to detail and focus on user experience is unmatched.",
-      name: "Michael Chen",
+      name: "Bradley Cooper",
       position: "CEO",
       company: "Innovate Labs",
-      image: "https://randomuser.me/api/portraits/men/2.jpg"
+      image: "/rizedigitalv2/images/Bradley_Cooper.jpg"
     },
     {
       quote: "Working with Rize Digital on our SEO strategy has been a game-changer. We're now ranking on the first page for all our key terms, and our organic traffic has increased by 150%.",
       name: "Emily Rodriguez",
       position: "E-commerce Manager",
       company: "StyleHouse",
-      image: "https://randomuser.me/api/portraits/women/3.jpg"
+      image: "/rizedigitalv2/images/Emily_Rodriguez.jpg"
     }
   ];
 
@@ -229,7 +229,7 @@ const Home = () => {
                   <span>Proven results, like a 30% average ROI increase in six months</span>
                 </li>
               </ul>
-              <Link to="/about" className="btn btn-primary">
+              <Link to="/contact" className="btn btn-primary">
                 Get Your Free Marketing Assessment
               </Link>
             </div>

@@ -63,7 +63,7 @@ const About = () => {
       expertise: ["Business Development", "Financial Strategy", "Client Relations"],
       social: {
         x: "https://x.com/BeauTetreault",
-        linkedin: "https://www.linkedin.com/company/rize-digital"
+        linkedin: "https://www.linkedin.com/in/beau-t-b91aab366/"
       }
     }
   ];

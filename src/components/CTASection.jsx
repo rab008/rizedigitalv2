@@ -6,6 +6,10 @@
  * @param {string} props.subheading - CTA subheading text
  * @param {boolean} props.showTrustBadges - Whether to show trust badges
  */
+
+
+import { Link } from 'react-router-dom';
+
 const CTASection = ({ heading, subheading, showTrustBadges = true }) => {
   // Trust badges data
   const trustBadges = [
@@ -30,15 +34,15 @@ const CTASection = ({ heading, subheading, showTrustBadges = true }) => {
   ];
 
   return (
-    <section className="bg-dark-blue text-white py-16">
+    <section className="bg-navy-blue text-white py-16">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading || "Ready to Elevate Your Digital Presence?"}</h2>
           <p className="text-lg text-gray-300 mb-8">{subheading || "Get in touch with our team of experts to discuss how we can help your business grow."}</p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#" className="btn btn-primary text-center">Get Quote</a>
-            <a href="tel:+1234567890" className="btn bg-white text-dark-blue hover:bg-gray-100 text-center">
+            <Link to="/contact" className="btn btn-primary text-center">Get Quote</Link>
+            <a href="tel:(475) 264-4226" className="btn bg-white text-dark-blue hover:bg-gray-100 text-center">
               Call Now
             </a>
           </div>

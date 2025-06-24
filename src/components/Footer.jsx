@@ -104,9 +104,8 @@ const Footer = () => {
             &copy; {currentYear} Rize Digital. All rights reserved.
           </p>
           <div className="flex justify-center md:justify-end space-x-4 text-sm text-gray-400">
-            <a href="#" className="hover:text-accent-orange transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-accent-orange transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-accent-orange transition-colors">Sitemap</a>
+            <Link to="/privacy-policy" className="hover:text-accent-orange transition-colors">Privacy Policy</Link>
+            <Link to="/terms-and-conditions" className="hover:text-accent-orange transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

@@ -14,6 +14,8 @@ import GoogleAds from './pages/services/GoogleAds';
 import EmailMarketing from './pages/services/EmailMarketing';
 import LeadGeneration from './pages/services/LeadGeneration';
 import WebDevelopment from './pages/services/WebDevelopment';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import ScrollToTop from './components/ScrollToTop';
 
 /**
@@ -41,6 +43,8 @@ function App() {
           <Route path="case-study/king-land-clearing" element={<KingLandClearingCaseStudy />} />
           <Route path="case-study/wards-excavation" element={<WardsExcavationCaseStudy />} />
           <Route path="case-study/bomann-fencing" element={<BomannFencingCaseStudy />} />
+          <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
           {/* Add more routes as needed */}
         </Route>
       </Routes>
