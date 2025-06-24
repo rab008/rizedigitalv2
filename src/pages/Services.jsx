@@ -117,30 +117,6 @@ const Services = () => {
     }
   ];
 
-  // Testimonials data
-  const testimonials = [
-    {
-      quote: "Rize Digital transformed our online presence completely. Their strategic approach to digital marketing has resulted in a 200% increase in qualified leads within just 3 months.",
-      name: "Sarah Johnson",
-      position: "Marketing Director",
-      company: "TechSolutions Inc.",
-      image: "https://randomuser.me/api/portraits/women/1.jpg"
-    },
-    {
-      quote: "The website Rize Digital built for us not only looks fantastic but also converts visitors at an impressive rate. Their attention to detail and focus on user experience is unmatched.",
-      name: "Michael Chen",
-      position: "CEO",
-      company: "Innovate Labs",
-      image: "https://randomuser.me/api/portraits/men/2.jpg"
-    },
-    {
-      quote: "Working with Rize Digital on our SEO strategy has been a game-changer. We're now ranking on the first page for all our key terms, and our organic traffic has increased by 150%.",
-      name: "Emily Rodriguez",
-      position: "E-commerce Manager",
-      company: "StyleHouse",
-      image: "https://randomuser.me/api/portraits/women/3.jpg"
-    }
-  ];
 
   return (
     <>
