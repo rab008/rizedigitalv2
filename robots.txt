@@ -1,0 +1,43 @@
+# Rize Digital robots.txt
+# https://rizedigital.com/
+
+User-agent: *
+Allow: /
+
+# Allow all bots to access the sitemap
+Sitemap: https://rizedigital.com/sitemap.xml
+
+# Disallow access to any admin or private areas if they exist
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login/
+Disallow: /dashboard/
+
+# Google-specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing-specific crawlers
+User-agent: Bingbot
+Allow: /
+
+# Prevent crawling of duplicate content
+Disallow: /*?*
+
+# Prevent crawling of potential development/staging environments
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /test/
+
+# Prevent crawling of any temporary files
+Disallow: /*.tmp$
+Disallow: /*.temp$
+
+# Crawl delay directive for bots that respect it (not Google)
+Crawl-delay: 1
