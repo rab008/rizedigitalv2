@@ -7,43 +7,6 @@ import { useEffect, useRef, useState } from 'react';
  * Enhanced with modern UI/UX design elements
  */
 const Contact = () => {
-  // Form state
-  const [formData, setFormData] = useState({
-    fullName: '',
-    companyName: '',
-    email: '',
-    phone: '',
-    website: '',
-    serviceInterest: '',
-    referralSource: '',
-    message: '',
-    preferredContact: 'email'
-  });
-
-  // Form handling
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will contact you shortly.');
-    // Reset form
-    setFormData({
-      fullName: '',
-      companyName: '',
-      email: '',
-      phone: '',
-      website: '',
-      serviceInterest: '',
-      referralSource: '',
-      message: '',
-      preferredContact: 'email'
-    });
-  };
 
   // FAQ state
   const [openFaq, setOpenFaq] = useState(null);
