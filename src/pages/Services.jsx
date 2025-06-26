@@ -49,7 +49,7 @@ const Services = () => {
       title: "AI & Automations",
       description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/ai_automations_icon.jpg" 
+                  src="/images/ai_automations_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -59,7 +59,7 @@ const Services = () => {
       title: "Email Marketing",
       description: "Strategic email campaigns that convert prospects, engage customers, and drive revenue. Our data-driven approach delivers personalized customer journeys with measurable results.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/exclusive_partner_icon.jpg" 
+                  src="/images/exclusive_partner_icon.jpg" 
                   alt="email marketing" 
                   className="rounded-lg"
                 />`,
@@ -69,7 +69,7 @@ const Services = () => {
       title: "Google Ads",
       description: "Expert Google Ads management to drive qualified traffic and increase conversions. We optimize your campaigns for maximum performance.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/lead_generation_icon.jpg" 
+                  src="/images/lead_generation_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -79,7 +79,7 @@ const Services = () => {
       title: "Lead Generation",
       description: "Deliver a predictable stream of high-quality prospects ready to book, buy, or call. We combine multi-channel traffic, conversion-optimized landing pages, and disciplined follow-up to keep your pipeline full.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/results_driven_icon.jpg" 
+                  src="/images/results_driven_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -89,7 +89,7 @@ const Services = () => {
       title: "SEO",
       description: "Improve your search engine rankings and drive organic traffic with our data-driven SEO strategies tailored to your business goals.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/seo_optimization_icon.jpg" 
+                  src="/images/seo_optimization_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -99,7 +99,7 @@ const Services = () => {
       title: "Website Development",
       description: "Custom, responsive websites designed to convert visitors into customers. We focus on user experience, performance, and SEO-friendly code.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/wordpress_development_icon.jpg" 
+                  src="/images/wordpress_development_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,

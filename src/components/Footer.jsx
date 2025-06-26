@@ -16,7 +16,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/rizedigitalv2/images/Rize-Digital-horizontal-logo.png" 
+                src="/images/Rize-Digital-horizontal-logo.png" 
                 alt="Rize Digital Logo" 
                 className="h-10"
               />
