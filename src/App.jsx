@@ -25,7 +25,7 @@ import ScrollToTop from './components/ScrollToTop';
  */
 function App() {
   return (
-    <Router basename="/rizedigitalv2">
+    <Router basename="/">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />}>
