@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react()],
   // Base path for GitHub Pages deployment
   // Change 'rizedigitalv2' to your GitHub repository name
-  base: '/rizedigitalv2/',
+  base: '/',
   // Build configuration
   build: {
     outDir: 'dist',
