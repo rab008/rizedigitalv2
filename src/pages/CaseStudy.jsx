@@ -53,7 +53,7 @@ const CaseStudyLibrary = () => {
         "[% drop] cost-per-lead",
         "territory expansion to three counties in 90 days"
       ],
-      image: "/rizedigitalv2/images/kinglandclearing.jpg",
+      image: "/images/kinglandclearing.jpg",
       link: "/case-study/king-land-clearing"
     },
     {
@@ -65,7 +65,7 @@ const CaseStudyLibrary = () => {
         "[% boost] booked jobs",
         "#1 rankings for 20 high-intent keywords"
       ],
-      image: "/rizedigitalv2/images/ward-ex.webp",
+      image: "/images/ward-ex.webp",
       link: "/case-study/wards-excavation"
     },
     {
@@ -77,7 +77,7 @@ const CaseStudyLibrary = () => {
         "[% ROI] on Google Ads",
         "first-page positions across five counties"
       ],
-      image: "/rizedigitalv2/images/Bomann-case-study.jpg",
+      image: "/images/Bomann-case-study.jpg",
       link: "/case-study/bomann-fencing"
     }
   ];
@@ -116,7 +116,7 @@ const CaseStudyLibrary = () => {
               <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
                 <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto text-navy-blue">
                  <img 
-                    src="/rizedigitalv2/images/verified_metrics_icon.jpg" 
+                    src="/images/verified_metrics_icon.jpg" 
                     alt="team collaboration" 
                     className="h-10 w-10 rounded"
                   />
@@ -128,7 +128,7 @@ const CaseStudyLibrary = () => {
               <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
                 <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto text-navy-blue">
                   <img 
-                    src="/rizedigitalv2/images/transparent_tactics_icon.jpg" 
+                    src="/images/transparent_tactics_icon.jpg" 
                     alt="team collaboration" 
                     className="h-10 w-10 rounded"
                   />
@@ -140,7 +140,7 @@ const CaseStudyLibrary = () => {
               <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
                 <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto text-navy-blue">
                   <img 
-                    src="/rizedigitalv2/images/exclusive_partner_icon.jpg" 
+                    src="/images/exclusive_partner_icon.jpg" 
                     alt="team collaboration" 
                     className="h-10 w-10 rounded"
                   />

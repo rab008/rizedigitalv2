@@ -41,7 +41,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img 
-            src="/rizedigitalv2/images/Rize-Digital-horizontal-logo.png" 
+            src="/images/Rize-Digital-horizontal-logo.png" 
             alt="Rize Digital Logo" 
             className="h-10"
           />

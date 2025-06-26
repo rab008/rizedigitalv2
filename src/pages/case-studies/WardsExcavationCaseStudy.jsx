@@ -377,7 +377,7 @@ const WardsExcavationCaseStudy = () => {
                 {/* Full width image container */}
                 <div className="w-full flex justify-center p-6 bg-white">
                   <img 
-                    src="/rizedigitalv2/images/ward-results.jpg" 
+                    src="/images/ward-results.jpg" 
                     alt="ward excavation Case Study" 
                     className="max-h-[400px] object-scale-down"
                   />

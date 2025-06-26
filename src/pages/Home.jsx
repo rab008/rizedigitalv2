@@ -50,7 +50,7 @@ const Home = () => {
       title: "AI & Automations",
       description: "Leverage AI and automation to supercharge your marketing. Our experts craft strategies that drive efficiency, engagement, and growth. Stay ahead in the digital age with cutting-edge solutions tailored to your business needs.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/ai_automations_icon.jpg" 
+                  src="/images/ai_automations_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -60,7 +60,7 @@ const Home = () => {
       title: "Email Marketing",
       description: "Strategic email campaigns that convert prospects, engage customers, and drive revenue. Our data-driven approach delivers personalized customer journeys with measurable results.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/exclusive_partner_icon.jpg" 
+                  src="/images/exclusive_partner_icon.jpg" 
                   alt="email marketing" 
                   className="rounded-lg"
                 />`,
@@ -70,7 +70,7 @@ const Home = () => {
       title: "Google Ads",
       description: "Expert Google Ads management to drive qualified traffic and increase conversions. We optimize your campaigns for maximum performance.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/lead_generation_icon.jpg" 
+                  src="/images/lead_generation_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -80,7 +80,7 @@ const Home = () => {
       title: "Lead Generation",
       description: "Deliver a predictable stream of high-quality prospects ready to book, buy, or call. We combine multi-channel traffic, conversion-optimized landing pages, and disciplined follow-up to keep your pipeline full.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/results_driven_icon.jpg" 
+                  src="/images/results_driven_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -90,7 +90,7 @@ const Home = () => {
       title: "SEO",
       description: "Improve your search engine rankings and drive organic traffic with our data-driven SEO strategies tailored to your business goals.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/seo_optimization_icon.jpg" 
+                  src="/images/seo_optimization_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -100,7 +100,7 @@ const Home = () => {
       title: "Website Development",
       description: "Custom, responsive websites designed to convert visitors into customers. We focus on user experience, performance, and SEO-friendly code.",
       icon: ` <img 
-                  src="/rizedigitalv2/images/wordpress_development_icon.jpg" 
+                  src="/images/wordpress_development_icon.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />`,
@@ -115,21 +115,21 @@ const Home = () => {
       name: "Tyrone Jackson",
       position: "Marketing Director",
       company: "TechSolutions Inc.",
-      image: "/rizedigitalv2/images/Tyrone_Jackson.jpg"
+      image: "/images/Tyrone_Jackson.jpg"
     },
     {
       quote: "The website Rize Digital built for us not only looks fantastic but also converts visitors at an impressive rate. Their attention to detail and focus on user experience is unmatched.",
       name: "Bradley Cooper",
       position: "CEO",
       company: "Innovate Labs",
-      image: "/rizedigitalv2/images/Bradley_Cooper.jpg"
+      image: "/images/Bradley_Cooper.jpg"
     },
     {
       quote: "Working with Rize Digital on our SEO strategy has been a game-changer. We're now ranking on the first page for all our key terms, and our organic traffic has increased by 150%.",
       name: "Emily Rodriguez",
       position: "E-commerce Manager",
       company: "StyleHouse",
-      image: "/rizedigitalv2/images/Emily_Rodriguez.jpg"
+      image: "/images/Emily_Rodriguez.jpg"
     }
   ];
 
@@ -158,7 +158,7 @@ const Home = () => {
                 <div className="flex space-x-6">
                   {/* Placeholder for client logos */}
                     <img 
-                      src="/rizedigitalv2/images/google_review_5_start.webp" 
+                      src="/images/google_review_5_start.webp" 
                       alt="Google 5 star rating" 
                       className="rounded opacity-70 h-12"
                     />
@@ -236,7 +236,7 @@ const Home = () => {
             <div className="order-first lg:order-last">
               {/* Placeholder for about image */}
                 <img 
-                  src="/rizedigitalv2/images/Infographic_Graphic_Organizer.jpg" 
+                  src="/images/Infographic_Graphic_Organizer.jpg" 
                   alt="team collaboration" 
                   className="rounded-lg"
                 />

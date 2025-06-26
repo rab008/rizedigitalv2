@@ -295,7 +295,7 @@ const KingLandClearingCaseStudy = () => {
                 {/* Full width image container */}
                 <div className="w-full flex justify-center p-6 bg-white">
                   <img 
-                    src="/rizedigitalv2/images/kING-RESULTS.jpg" 
+                    src="/images/kING-RESULTS.jpg" 
                     alt="King Land Clearing Results" 
                     className="max-h-[400px] object-scale-down"
                   />

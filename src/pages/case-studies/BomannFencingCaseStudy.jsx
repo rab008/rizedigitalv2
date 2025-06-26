@@ -387,7 +387,7 @@ const BomannFencingCaseStudy = () => {
                 {/* Full width image container */}
                 <div className="w-full flex justify-center p-6 bg-white">
                   <img 
-                    src="/rizedigitalv2/images/bomann-results.jpg" 
+                    src="/images/bomann-results.jpg" 
                     alt="Bomann Fencing Case Study" 
                     className="max-h-[400px] object-scale-down"
                   />
